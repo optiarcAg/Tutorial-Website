@@ -89,8 +89,8 @@
             >
             <div class="dropdown-menu fade-down m-0">
               <!-- <a href="team.html" class="dropdown-item">Our Team</a> -->
-              <a href="testimonial.html" class="dropdown-item">Free Webinar</a>
-              <a href="404.html" class="dropdown-item">Interships</a>
+              <a href="contact.html" class="dropdown-item">Free Webinar</a>
+              <a href="courses.html" class="dropdown-item">Interships</a>
             </div>
           </div>
           <a href="contact.html" class="nav-item nav-link">Contact</a>
@@ -111,7 +111,7 @@
           <div class="col-sm-12 mx-t3 mb-4">
             <h2 class="text-center text-info">Register</h2>
           </div>
-          <div class="col-sm-6 form-group">
+          <div class="col-sm-4 form-group">
             <label for="name-f">First Name</label>
             <input
               type="text"
@@ -122,7 +122,7 @@
               required
             />
           </div>
-          <div class="col-sm-6 form-group">
+          <div class="col-sm-4 form-group">
             <label for="name-l">Last name</label>
             <input
               type="text"
@@ -133,7 +133,7 @@
               required
             />
           </div>
-          <div class="col-sm-6 form-group">
+          <div class="col-sm-4 form-group">
             <label for="email">Email</label>
             <input
               type="email"
@@ -144,25 +144,61 @@
               required
             />
           </div>
-
-          <div class="form-row">
-            <div class="form-group col-md-3">
-              <label for="inputIam">I am</label>
-              <select name="inputIam" class="form-control">
-                <option selected="">Student</option>
-                <option>Fresher/Graduate</option>
-                <option>Professional</option>
-              </select>
-            </div>
-            <div class="form-group col-md-6">
-              <label for="inputCollege">College/Organization</label>
-              <input
-                class="form-control"
-                name="inputCollege"
-                placeholder="College Name / Company Name"
-                required=""
-              />
-            </div>
+          <div class="col-sm-4 form-group">
+            <label for="tel">Contact</label>
+            <input
+              type="tel"
+              name="phone"
+              class="form-control"
+              id="tel"
+              placeholder="Enter Your Contact Number."
+              required
+            />
+          </div>
+          <div class="col-sm-4 form-group">
+            <label for="sex">Gender</label>
+            <select id="sex" class="form-control browser-default custom-select">
+              <option value="male">Gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="unspesified">Unspecified</option>
+            </select>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputIam">I am</label>
+            <select name="inputIam" class="form-control">
+              <option selected="">Student</option>
+              <option>Fresher/Graduate</option>
+              <option>Professional</option>
+            </select>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputStream">Stream</label>
+            <select name="inputStream" class="form-control">
+              <option selected="">BE/BTech</option>
+              <option>BSC/MSC</option>
+              <option>BCA/MCA</option>
+              <option>BCOM/MCOM</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputCollege">College/Organization</label>
+            <input
+              class="form-control"
+              name="inputCollege"
+              placeholder="College Name / Company Name"
+              required=""
+            />
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputPYear">Passout Year</label>
+            <input
+              class="form-control"
+              name="inputPYear"
+              placeholder="ex. 2015"
+              required=""
+            />
           </div>
 
           <div class="col-sm-4 form-group">
@@ -176,7 +212,7 @@
               required
             />
           </div>
-          <div class="col-sm-2 form-group">
+          <div class="col-sm-4 form-group">
             <label for="zip">Postal-Code</label>
             <input
               type="zip"
@@ -187,31 +223,24 @@
               required
             />
           </div>
-
-          <div class="col-sm-6 form-group">
-            <label for="sex">Gender</label>
-            <select id="sex" class="form-control browser-default custom-select">
-              <option value="male">Gender</option>
-              <option value="male">Male</option>
-              <option value="female">Female</option>
-              <option value="unspesified">Unspecified</option>
+          <div class="form-group col-md-4">
+            <label for="knewFrom">Knew us from?</label>
+            <select name="knewFrom" class="form-control">
+              <option>Social Media</option>
+              <option>Friend</option>
+              <option>Email/SMS</option>
+              <option>Theatre Ads</option>
+              <option>Poster</option>
+              <option>Webinar</option>
             </select>
           </div>
+
+          <!-- <div class="form-row"> -->
+
           <!-- <div class="col-sm-2 form-group">
                       <label for="cod">Country code</label>
                      
                     </div> -->
-          <div class="col-sm-4 form-group">
-            <label for="tel">Contact</label>
-            <input
-              type="tel"
-              name="phone"
-              class="form-control"
-              id="tel"
-              placeholder="Enter Your Contact Number."
-              required
-            />
-          </div>
 
           <!-- <div class="col-sm-6 form-group">
                       <label for="pass2">Confirm Password</label>
@@ -228,16 +257,45 @@
             </label>
           </div>
 
-          <div class="col-sm-12 form-group mb-0">
-            <button class="btn btn-primary float-right">Register</button>
-          </div>
+          <form action="ThankYou.html">
+            <div class="col-sm-12 form-group mb-0">
+              <button type="submit" class="btn btn-primary float-right">Register</button>
+            </div>
+          </form>
+          
 
+
+          <script>
+            document.getElementById("registrationForm").addEventListener("Register", function(event) {
+              event.preventDefault(); // Prevent form submission
+          
+              // Perform field validation here
+              // Example validation logic:
+              var inputField = document.getElementById("inputField").value;
+              if (inputField === "") {
+                alert("Please fill in all required fields");
+                return false; // Validation failed, do not proceed with submission
+              }
+          
+              // Validation succeeded, redirect to the desired page
+              window.location.href = "ThankYou.html";
+            });
+          </script>
+         
+          
+          
+          
+          
+
+          <!-- <div class="col-sm-12 form-group mb-0">
+            <button class="btn btn-primary float-right" href="ThankYou.html">Register</button>
+          </div> -->
 
           <!-- <div class="text-center p-2">
             <a href="Syllabus.html" type="button" class="btn btn-primary"
               >submit</a
-            > -->
-          </div>
+            >
+          </div> -->
         </div>
       </form>
     </div>
@@ -260,11 +318,11 @@
           <div class="col-lg-3 col-md-6">
             <h4 class="text-white mb-3">Contact</h4>
             <p class="mb-2">
-              <i class="fa fa-map-marker-alt me-3"></i>712A, Free Zone, Gera’s Imperium Alpha, Eon Free Zone Rd, Rajaram Patil Nagar, Vitthal Nagar, Kharadi, Pune, Maharashtra 411014
+              <i class="fa fa-map-marker-alt me-3"></i>712A, Free Zone, Gera’s
+              Imperium Alpha, Eon Free Zone Rd, Rajaram Patil Nagar, Vitthal
+              Nagar, Kharadi, Pune, Maharashtra 411014
             </p>
-            <p class="mb-2">
-              <i class="fa fa-phone-alt me-3"></i>089996 13069
-            </p>
+            <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>089996 13069</p>
             <p class="mb-2">
               <i class="fa fa-envelope me-3"></i>info@example.com
             </p>
