@@ -54,6 +54,7 @@ span.psw {
   padding-top: 16px;
 }
 
+
 /* Change styles for span and cancel button on extra small screens */
 @media screen and (max-width: 300px) {
   span.psw {
@@ -70,36 +71,44 @@ span.psw {
 
 <h2>User Login</h2>
 
-<form action="/action_page.php" method="post">
-  <div class="imgcontainer">
-    <!-- <img src="img_avatar2.png" alt="Avatar" class="avatar"> -->
-  </div>
 
-  <div class="container">
-    <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
+  
+  <body>
+    <form action="courses.html">
+      
+  
+      <div class="container">
+        <label><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+  
+        <label><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+  
+        <button type="submit" a href="courses.html">Login</button>
+        <input type="checkbox" checked="checked"> Remember me
+      </div>
+  
+      <div class="container" style="background-color:#f1f1f1">
+        <button type="button" class="cancelbtn">Cancel</button>
+        <button type="button" class="cancelbtn" a href="index.html">Back</button>
+ 
+        <span class="psw">Forgot <a href="#">password?</a></span>
+      </div>
+    </form>
 
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-        
-    <button type="submit">Login</button>
-    <label>
-      <input type="checkbox" checked="checked" name="remember"> Remember me
-    </label>
-  </div>
+    
 
-  <div class="container" style="background-color:#f1f1f1">
-    <button type="button" class="cancelbtn">Cancel</button>
-    <button type="button" class="cancelbtn" a href="index.html">Back</button>
 
-    <!-- <div class="container" style="background-color:#f1f1f1" >
-        <a href="index.html" type="button" class="Backbtn"
-          >Back</a
-        >
-      </div> -->
-    <span class="psw">Forgot <a href="#">password?</a></span>
-  </div>
-</form>
+  
+  </body>
+  
+  </html>
+  
 
-</body>
-</html>
+
+
+
+
+
+
+   
